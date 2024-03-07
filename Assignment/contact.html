@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memphis Redbirds - Contact</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="header" id="header">
+        <!-- Header content, including logo and navigation links -->
+        <h1 class="logo">Memphis Redbirds</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main" id="main">
+        <!-- Main content, including contact form -->
+        <div class="contact">
+            <h2>Contact Memphis Redbirds</h2>
+            <form id="contactForm">
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <br>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+                <button type="submit">Send Message</button>
+                <p id="errorMessage" style="display: none; color: red;">Please fill out all fields.</p>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer" id="footer">
+        <!-- Footer content, including copyright and tagname -->
+        <p>&copy; 2024 Memphis Redbirds. All rights reserved. Developed by <span id="tagName">YourTagName</span>.</p>
+    </div>
+</body>
+</html>

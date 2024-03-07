@@ -1,0 +1,129 @@
+/* Global styles */
+
+/* Apply font family, margin, padding, and flexbox layout to the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height of the body to 100% of the viewport height */
+    background-color: lightblue; /* Light blue background */
+    color: black; /* Black text color */
+}
+
+/* Styles for header and footer */
+.header, .footer {
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    padding: 10px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align text */
+}
+
+/* Styles for navigation */
+nav ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add right margin between list items */
+}
+
+nav ul li a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Specific styles for the main container */
+.main {
+    flex: 1; /* Allow the main container to grow and fill available space */
+    margin-top: 20px; /* Add top margin to push the container down */
+}
+
+
+/* Specific styles for pages */
+.banner {
+    text-align: center; /* Center-align text within the banner */
+}
+
+/* CSS for the banner image container */
+.bannerImageContainer {
+    width: 100%; /* Set the width of the container to 100% */
+    height: auto; /* Allow the height to adjust automatically to the height of the image */
+    max-height: 300px; /* Set a maximum height to prevent the container from becoming too large */
+    overflow: hidden; /* Hide any overflow content beyond the container */
+}
+
+/* CSS for the banner image */
+.bannerImage {
+    width: 50%; /* Set the width of the image to 50% of its container */
+    max-height: 200px; /* Set a maximum height for the image */
+    /* object-fit: cover; Ensure the image covers the entire container, maintaining aspect ratio */
+}
+
+
+.about, .contact {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center-align items horizontally */
+    width: 100%; /* Set width to 100% */
+    height: 100%; /* Set height to 100% */
+    background-color: white; /* White background */
+    color: black; /* Black text color */
+}
+
+.aboutContent {
+    width: 80%; /* Set width to 80% */
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+.aboutImage {
+    width: 50%; /* Set width to 50% */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 300px; /* Set maximum height */
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Center-align items horizontally */
+}
+
+.contactForm {
+    width: 50%; /* Set width to 50% */
+    margin: 0 auto; /* Center-align the form horizontally */
+}
+
+.contactForm label {
+    display: block; /* Display labels as blocks */
+    margin-bottom: 5px; /* Add bottom margin */
+}
+
+.contactForm input[type="email"],
+.contactForm textarea {
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding */
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+.contactForm button {
+    background-color: red; /* Red background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.contactForm button:hover {
+    background-color: #800000; /* Dark red background color on hover */
+    color: white; /* White text color */
+}
+
+
+#errorMessage {
+    margin-top: 10px; /* Add top margin */
+    color: red; /* Red color for error message */
+}
+/* CSS for the welcome message container */
+#welcomeMessageContainer {
+    max-height: 50px; /* Set a maximum height for the container */
+    overflow: hidden; /* Hide any overflow content beyond the container */
+}
