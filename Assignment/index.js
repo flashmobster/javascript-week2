@@ -61,6 +61,7 @@ function handleSubmit(event) {
     event.preventDefault();
 
     // Get the user inputs from the form
+    var returnHome = document.getElementById("returnHome")
     var error = document.getElementById("errorMessage")
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
@@ -77,7 +78,7 @@ function handleSubmit(event) {
 
         // Replace the form with a success message
         var form = document.getElementById("contactForm");
-        form.innerHTML = "<p>Your message has been sent successfully!</p>";
+        form.innerHTML = "<p>Your message has been sent successfully!</p><br><a href = './index.html'>Return Home?</a>";
         
         // Return to the homepage after a successful message with a 5-second delay
         setTimeout(function() {
