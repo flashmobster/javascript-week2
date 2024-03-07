@@ -1,0 +1,39 @@
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 3em;
+    }
+    input{
+        font-size: 1.5em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    textarea {
+        font-size: 2em;
+    }
+</style>
+<body>
+<h1>Buy a Plumbus</h1>
+<img src="https://web.pdx.edu/~nboxwell/342/plumbus/img/plumbus_lg.png"/>
+
+<form id="form" action="mailto:raygreen@code-crew.org?cc=ray@yahoo.com" method="get" enctype="text/plain">
+    Subject:<br>
+    <input id="subject" type="text" name="subject" placeholder="Your Name"><br>
+    Email:<br>
+    <input id="email" type="email" name="cc" placeholder="Your Email"><br>
+    Message:<br>
+    <textarea id="body" name="body" rows="5" cols="30" placeholder="Your Message"></textarea><br>
+    <input type="submit" value="Send">
+  </form>
+
+</body>

@@ -72,7 +72,7 @@ function handleSubmit(event) {
         var body = "From: " + email + "\n\n" + message;
 
         // Open the default email client with pre-filled fields
-        window.location.href = "mailto:exampleredbirdss@redbirds.com?cc=redbirdscc@example.com&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        window.location.href = "mailto:exampleredbirdss@redbirds.com?cc=redbirdscc@example.com&subject=" + $(subject) + "&body=" + $(body);
 
         // Replace the form with a success message
         var form = document.getElementById("contactForm");
@@ -85,9 +85,10 @@ function handleSubmit(event) {
     } else {
         // Display an error message if the email or message fields are empty
         document.getElementById("errorMessage").style.display = "block";
+        document.getElementById("errorMessage").id = ""
+        document.getElementById("errorMessage").innerText = "Please fill out all fields."
     }
 }
-
 
 // Event listener for form submission
 document.getElementById("contactForm").addEventListener("submit", handleSubmit);
