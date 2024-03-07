@@ -61,6 +61,7 @@ function handleSubmit(event) {
     event.preventDefault();
 
     // Get the user inputs from the form
+    var error = document.getElementById("errorMessage")
     var email = document.getElementById("email").value;
     var message = document.getElementById("message").value;
 
@@ -72,7 +73,7 @@ function handleSubmit(event) {
         var body = "From: " + email + "\n\n" + message;
 
         // Open the default email client with pre-filled fields
-        window.location.href = "mailto:exampleredbirdss@redbirds.com?cc=redbirdscc@example.com&subject=" + $(subject) + "&body=" + $(body);
+        window.location.href = "mailto:exampleredbirdss@redbirds.com?cc=redbirdscc@example.com&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
 
         // Replace the form with a success message
         var form = document.getElementById("contactForm");
@@ -80,13 +81,17 @@ function handleSubmit(event) {
         
         // Return to the homepage after a successful message with a 5-second delay
         setTimeout(function() {
-            window.location.href = "index.html";
+            window.location.href = "./index.html";
         }, 5000);
-    } else {
+    } 
+    else {
         // Display an error message if the email or message fields are empty
-        document.getElementById("errorMessage").style.display = "block";
-        document.getElementById("errorMessage").id = ""
-        document.getElementById("errorMessage").innerText = "Please fill out all fields."
+        error.style.display = "block";
+        error.innerHTML = "<p>Please fill out all fields.</p>"
+        
+        // document.getElementById("errorMessage").style.display = "block";
+        // document.getElementById("errorMessage").id = ""
+        // document.getElementById("errorMessage").innerText = "Please fill out all fields."
     }
 }
 

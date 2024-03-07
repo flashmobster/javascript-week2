@@ -1,0 +1,16 @@
+<!-- Sets the background to change to random colors at a 2000 delay -->
+
+<h1 style="font-size: 4em;">THis is my landing page</h1>
+
+
+<script>
+
+    let bodyHTML = document.querySelector("body")
+    setInterval(function(){
+        let randomRedValue = Math.random() * 255
+        let randomBlueValue = Math.random() * 255
+        let randomGreenValue = Math.random() * 255
+
+        bodyHTML.style.backgroundColor = `rgb(${randomRedValue}, ${randomGreenValue}, ${randomBlueValue})`
+    }, 2000)
+</script>
